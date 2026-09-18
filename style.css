@@ -62,8 +62,7 @@ h1 {
 
     padding: 10px 10px 20px;
 
-    box-shadow:
-        0 15px 35px rgba(60, 45, 30, 0.18);
+    box-shadow: 0 15px 35px rgba(60, 45, 30, 0.18);
 
     transform: rotate(-3deg);
 
@@ -114,6 +113,5 @@ button {
 button:hover {
     transform: translateY(-3px);
 
-    box-shadow:
-        0 8px 20px rgba(60, 45, 30, 0.2);
+    box-shadow: 0 8px 20px rgba(60, 45, 30, 0.2);
 }
