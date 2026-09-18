@@ -1,117 +1,332 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;500;600&display=swap');
 
+/* =========================
+GENERAL
+========================= */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
 }
 
 body {
-    background: #eee5d5;
-    color: #493d34;
+background: #eee5d5;
+color: #493d34;
 
-    font-family: "DM Sans", sans-serif;
+```
+font-family: "DM Sans", sans-serif;
+```
+
 }
+
+/* =========================
+HERO
+========================= */
 
 .hero {
-    min-height: 100vh;
+min-height: 100vh;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
-    text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 
-    padding: 40px 20px;
+text-align: center;
 
-    position: relative;
-    overflow: hidden;
+padding: 40px 20px;
+
+position: relative;
+overflow: hidden;
+
+
 }
+
+/* Small uppercase text */
 
 .eyebrow {
-    font-size: 12px;
-    letter-spacing: 4px;
-    margin-bottom: 18px;
+font-size: 12px;
 
-    opacity: 0.7;
+
+letter-spacing: 4px;
+
+margin-bottom: 18px;
+
+opacity: 0.7;
+
+
 }
+
+/* Main title */
 
 h1 {
-    font-family: "Playfair Display", serif;
+font-family: "Playfair Display", serif;
 
-    font-size: clamp(48px, 10vw, 90px);
-    line-height: 0.95;
-    font-weight: 500;
 
-    margin-bottom: 20px;
+font-size: clamp(48px, 10vw, 90px);
+
+line-height: 0.95;
+
+font-weight: 500;
+
+margin-bottom: 20px;
+
+
 }
+
+/* Subtitle */
 
 .subtitle {
-    font-family: "Cormorant Garamond", serif;
+font-family: "Cormorant Garamond", serif;
 
-    font-size: 25px;
 
-    margin-bottom: 35px;
+font-size: 25px;
+
+margin-bottom: 35px;
+
+
 }
 
+/* =========================
+POLAROID
+========================= */
+
 .polaroid {
-    width: 230px;
+width: 230px;
 
-    background: #fffdf8;
 
-    padding: 10px 10px 20px;
+background: #fffdf8;
 
-    box-shadow: 0 15px 35px rgba(60, 45, 30, 0.18);
+padding: 10px 10px 20px;
 
-    transform: rotate(-3deg);
+box-shadow:
+    0 15px 35px rgba(60, 45, 30, 0.18);
 
-    margin-bottom: 40px;
+transform: rotate(-3deg);
 
-    transition: transform 0.4s ease;
+margin-bottom: 40px;
+
+transition: transform 0.4s ease;
+
+
 }
 
 .polaroid:hover {
-    transform: rotate(0deg) scale(1.03);
+transform: rotate(0deg) scale(1.03);
 }
 
 .polaroid img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
+width: 100%;
 
-    object-fit: cover;
 
-    display: block;
+aspect-ratio: 1 / 1;
+
+object-fit: cover;
+
+display: block;
+
+
 }
 
 .polaroid p {
-    font-family: "Cormorant Garamond", serif;
+font-family: "Cormorant Garamond", serif;
 
-    font-size: 20px;
 
-    margin-top: 10px;
+font-size: 20px;
+
+margin-top: 10px;
+
+
 }
 
+/* =========================
+BUTTON
+========================= */
+
 button {
-    border: none;
+border: none;
 
-    padding: 14px 28px;
 
-    background: #756453;
-    color: white;
+padding: 14px 28px;
 
-    font-family: "DM Sans", sans-serif;
+background: #756453;
 
-    font-size: 14px;
-    letter-spacing: 1px;
+color: white;
 
-    cursor: pointer;
+font-family: "DM Sans", sans-serif;
 
-    transition: 0.3s ease;
+font-size: 14px;
+
+letter-spacing: 1px;
+
+cursor: pointer;
+
+transition: 0.3s ease;
+
+
 }
 
 button:hover {
-    transform: translateY(-3px);
+transform: translateY(-3px);
 
-    box-shadow: 0 8px 20px rgba(60, 45, 30, 0.2);
+
+box-shadow:
+    0 8px 20px rgba(60, 45, 30, 0.2);
+
+
+}
+
+/* =========================
+MEMORIES
+========================= */
+
+.memories {
+min-height: 100vh;
+
+
+padding: 120px 30px;
+
+text-align: center;
+
+
+}
+
+/* Memories title */
+
+.memories h2 {
+max-width: 700px;
+
+
+margin: 0 auto 15px;
+
+font-family: "Playfair Display", serif;
+
+font-size: clamp(36px, 6vw, 60px);
+
+font-weight: 500;
+
+
+}
+
+/* Memories description */
+
+.section-intro {
+max-width: 500px;
+
+
+margin: 0 auto 60px;
+
+font-family: "Cormorant Garamond", serif;
+
+font-size: 22px;
+
+
+}
+
+/* =========================
+MEMORY GRID
+========================= */
+
+.memory-grid {
+max-width: 1000px;
+
+
+margin: auto;
+
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 40px;
+
+
+}
+
+/* Individual memory */
+
+.memory-card {
+background: #fffdf8;
+
+
+padding: 12px 12px 25px;
+
+box-shadow:
+    0 12px 30px rgba(60, 45, 30, 0.15);
+
+transition: transform 0.3s ease;
+
+
+}
+
+/* Slightly rotate each photo */
+
+.memory-card:nth-child(1) {
+transform: rotate(-3deg);
+}
+
+.memory-card:nth-child(2) {
+transform: rotate(2deg);
+}
+
+.memory-card:nth-child(3) {
+transform: rotate(-2deg);
+}
+
+/* Hover */
+
+.memory-card:hover {
+transform: rotate(0deg) translateY(-5px);
+}
+
+/* Memory images */
+
+.memory-card img {
+width: 100%;
+
+
+aspect-ratio: 1 / 1;
+
+object-fit: cover;
+
+display: block;
+
+margin-bottom: 15px;
+
+
+}
+
+/* Memory captions */
+
+.memory-card p {
+font-family: "Cormorant Garamond", serif;
+
+
+font-size: 20px;
+
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+
+.hero {
+    padding: 30px 20px;
+}
+
+.memory-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 300px;
+}
+
+
 }
