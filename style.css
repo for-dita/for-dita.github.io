@@ -1,332 +1,228 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;500;600&display=swap');
 
-/* =========================
-GENERAL
-========================= */
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 html {
-scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-background: #eee5d5;
-color: #493d34;
-
-```
-font-family: "DM Sans", sans-serif;
-```
-
+    background: #eee5d5;
+    color: #493d34;
+    font-family: "DM Sans", sans-serif;
 }
 
-/* =========================
-HERO
-========================= */
+
+/* FIRST PAGE */
 
 .hero {
-min-height: 100vh;
+    min-height: 100vh;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+    text-align: center;
 
-text-align: center;
-
-padding: 40px 20px;
-
-position: relative;
-overflow: hidden;
-
-
+    padding: 40px 20px;
 }
-
-/* Small uppercase text */
 
 .eyebrow {
-font-size: 12px;
-
-
-letter-spacing: 4px;
-
-margin-bottom: 18px;
-
-opacity: 0.7;
-
-
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+    opacity: 0.7;
 }
-
-/* Main title */
 
 h1 {
-font-family: "Playfair Display", serif;
+    font-family: "Playfair Display", serif;
 
+    font-size: clamp(48px, 10vw, 90px);
 
-font-size: clamp(48px, 10vw, 90px);
+    line-height: 0.95;
 
-line-height: 0.95;
+    font-weight: 500;
 
-font-weight: 500;
-
-margin-bottom: 20px;
-
-
+    margin-bottom: 20px;
 }
-
-/* Subtitle */
 
 .subtitle {
-font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond", serif;
 
+    font-size: 25px;
 
-font-size: 25px;
-
-margin-bottom: 35px;
-
-
+    margin-bottom: 35px;
 }
 
-/* =========================
-POLAROID
-========================= */
+
+/* POLAROID */
 
 .polaroid {
-width: 230px;
+    width: 230px;
 
+    background: #fffdf8;
 
-background: #fffdf8;
+    padding: 10px 10px 20px;
 
-padding: 10px 10px 20px;
+    box-shadow: 0 15px 35px rgba(60, 45, 30, 0.18);
 
-box-shadow:
-    0 15px 35px rgba(60, 45, 30, 0.18);
+    transform: rotate(-3deg);
 
-transform: rotate(-3deg);
+    margin-bottom: 40px;
 
-margin-bottom: 40px;
-
-transition: transform 0.4s ease;
-
-
+    transition: transform 0.4s ease;
 }
 
 .polaroid:hover {
-transform: rotate(0deg) scale(1.03);
+    transform: rotate(0deg) scale(1.03);
 }
 
 .polaroid img {
-width: 100%;
+    width: 100%;
 
+    aspect-ratio: 1 / 1;
 
-aspect-ratio: 1 / 1;
+    object-fit: cover;
 
-object-fit: cover;
-
-display: block;
-
-
+    display: block;
 }
 
 .polaroid p {
-font-family: "Cormorant Garamond", serif;
+    font-family: "Cormorant Garamond", serif;
 
+    font-size: 20px;
 
-font-size: 20px;
-
-margin-top: 10px;
-
-
+    margin-top: 10px;
 }
 
-/* =========================
-BUTTON
-========================= */
+
+/* BUTTON */
 
 button {
-border: none;
+    border: none;
 
+    padding: 14px 28px;
 
-padding: 14px 28px;
+    background: #756453;
 
-background: #756453;
+    color: white;
 
-color: white;
+    font-family: "DM Sans", sans-serif;
 
-font-family: "DM Sans", sans-serif;
+    font-size: 14px;
 
-font-size: 14px;
+    letter-spacing: 1px;
 
-letter-spacing: 1px;
+    cursor: pointer;
 
-cursor: pointer;
-
-transition: 0.3s ease;
-
-
+    transition: 0.3s ease;
 }
 
 button:hover {
-transform: translateY(-3px);
+    transform: translateY(-3px);
 
-
-box-shadow:
-    0 8px 20px rgba(60, 45, 30, 0.2);
-
-
+    box-shadow: 0 8px 20px rgba(60, 45, 30, 0.2);
 }
 
-/* =========================
-MEMORIES
-========================= */
 
-.memories {
-min-height: 100vh;
+/* SECOND PAGE */
 
+.letter {
+    min-height: 100vh;
 
-padding: 120px 30px;
+    padding: 100px 25px;
 
-text-align: center;
+    display: flex;
 
+    flex-direction: column;
 
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
 }
 
-/* Memories title */
+.letter-paper {
+    width: 100%;
 
-.memories h2 {
-max-width: 700px;
+    max-width: 650px;
 
+    background: #fffdf8;
 
-margin: 0 auto 15px;
+    padding: 55px 60px;
 
-font-family: "Playfair Display", serif;
+    box-shadow: 0 15px 40px rgba(60, 45, 30, 0.15);
 
-font-size: clamp(36px, 6vw, 60px);
-
-font-weight: 500;
-
-
+    position: relative;
 }
 
-/* Memories description */
+.letter-paper::before {
+    content: "♡";
 
-.section-intro {
-max-width: 500px;
+    position: absolute;
 
+    top: 20px;
 
-margin: 0 auto 60px;
+    right: 25px;
 
-font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
 
-font-size: 22px;
-
-
+    opacity: 0.35;
 }
 
-/* =========================
-MEMORY GRID
-========================= */
+.letter-paper h2 {
+    font-family: "Playfair Display", serif;
 
-.memory-grid {
-max-width: 1000px;
+    font-size: clamp(32px, 6vw, 48px);
 
+    font-weight: 500;
 
-margin: auto;
-
-display: grid;
-
-grid-template-columns: repeat(3, 1fr);
-
-gap: 40px;
-
-
+    margin-bottom: 30px;
 }
 
-/* Individual memory */
+.letter-paper p {
+    font-family: "Cormorant Garamond", serif;
 
-.memory-card {
-background: #fffdf8;
+    font-size: 22px;
 
+    line-height: 1.55;
 
-padding: 12px 12px 25px;
-
-box-shadow:
-    0 12px 30px rgba(60, 45, 30, 0.15);
-
-transition: transform 0.3s ease;
-
-
+    margin-bottom: 22px;
 }
 
-/* Slightly rotate each photo */
+.letter-paper .signature {
+    margin-top: 35px;
 
-.memory-card:nth-child(1) {
-transform: rotate(-3deg);
+    font-size: 24px;
+
+    font-style: italic;
 }
 
-.memory-card:nth-child(2) {
-transform: rotate(2deg);
-}
 
-.memory-card:nth-child(3) {
-transform: rotate(-2deg);
-}
-
-/* Hover */
-
-.memory-card:hover {
-transform: rotate(0deg) translateY(-5px);
-}
-
-/* Memory images */
-
-.memory-card img {
-width: 100%;
-
-
-aspect-ratio: 1 / 1;
-
-object-fit: cover;
-
-display: block;
-
-margin-bottom: 15px;
-
-
-}
-
-/* Memory captions */
-
-.memory-card p {
-font-family: "Cormorant Garamond", serif;
-
-
-font-size: 20px;
-
-
-}
-
-/* =========================
-MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 700px) {
 
+    .hero {
+        padding: 30px 20px;
+    }
 
-.hero {
-    padding: 30px 20px;
-}
+    .letter {
+        padding: 80px 20px;
+    }
 
-.memory-grid {
-    grid-template-columns: 1fr;
+    .letter-paper {
+        padding: 45px 30px;
+    }
 
-    max-width: 300px;
-}
-
+    .letter-paper p {
+        font-size: 20px;
+    }
 
 }
