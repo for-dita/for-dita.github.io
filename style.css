@@ -1,1 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;500;600&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eee5d5;
+    color: #493d34;
+
+    font-family: "DM Sans", sans-serif;
+}
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+
+    opacity: 0.7;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(48px, 10vw, 90px);
+    line-height: 0.95;
+    font-weight: 500;
+
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 25px;
+
+    margin-bottom: 35px;
+}
+
+.polaroid {
+    width: 230px;
+
+    background: #fffdf8;
+
+    padding: 10px 10px 20px;
+
+    box-shadow:
+        0 15px 35px rgba(60, 45, 30, 0.18);
+
+    transform: rotate(-3deg);
+
+    margin-bottom: 40px;
+
+    transition: transform 0.4s ease;
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+.polaroid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.polaroid p {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    margin-top: 10px;
+}
+
+button {
+    border: none;
+
+    padding: 14px 28px;
+
+    background: #756453;
+    color: white;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(60, 45, 30, 0.2);
+}
