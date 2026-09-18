@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500&family=Playfair+Display:wght@400;500;600&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
+
 
 body {
     background: #eee5d5;
@@ -17,7 +20,9 @@ body {
 }
 
 
-/* FIRST PAGE */
+/* =========================
+   FIRST PAGE
+========================= */
 
 .hero {
     min-height: 100vh;
@@ -29,38 +34,46 @@ body {
 
     text-align: center;
 
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
+
 
 .eyebrow {
     font-size: 12px;
+
     letter-spacing: 4px;
-    margin-bottom: 18px;
+
+    margin-bottom: 25px;
+
     opacity: 0.7;
 }
+
 
 h1 {
     font-family: "Playfair Display", serif;
 
     font-size: clamp(48px, 10vw, 90px);
 
-    line-height: 0.95;
+    line-height: 1;
 
     font-weight: 500;
 
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
+
 
 .subtitle {
     font-family: "Cormorant Garamond", serif;
 
-    font-size: 25px;
+    font-size: 27px;
 
-    margin-bottom: 35px;
+    margin-bottom: 50px;
 }
 
 
-/* POLAROID */
+/* =========================
+   POLAROID
+========================= */
 
 .polaroid {
     width: 230px;
@@ -73,14 +86,22 @@ h1 {
 
     transform: rotate(-3deg);
 
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 
-    transition: transform 0.4s ease;
+    cursor: pointer;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
 }
+
 
 .polaroid:hover {
     transform: rotate(0deg) scale(1.03);
+
+    box-shadow: 0 20px 40px rgba(60, 45, 30, 0.22);
 }
+
 
 .polaroid img {
     width: 100%;
@@ -92,21 +113,24 @@ h1 {
     display: block;
 }
 
+
 .polaroid p {
     font-family: "Cormorant Garamond", serif;
 
     font-size: 20px;
 
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 
-/* BUTTON */
+/* =========================
+   BUTTON
+========================= */
 
 button {
     border: none;
 
-    padding: 14px 28px;
+    padding: 15px 30px;
 
     background: #756453;
 
@@ -123,6 +147,7 @@ button {
     transition: 0.3s ease;
 }
 
+
 button:hover {
     transform: translateY(-3px);
 
@@ -130,12 +155,90 @@ button:hover {
 }
 
 
-/* SECOND PAGE */
+/* =========================
+   PHOTO POPUP
+========================= */
+
+.photo-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(30, 24, 20, 0.88);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: opacity 0.3s ease;
+
+    z-index: 1000;
+
+    cursor: pointer;
+}
+
+
+.photo-overlay.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+.photo-overlay img {
+    max-width: 90vw;
+
+    max-height: 90vh;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+
+    cursor: default;
+}
+
+
+.close-photo {
+    position: absolute;
+
+    top: 20px;
+
+    right: 30px;
+
+    color: white;
+
+    font-size: 40px;
+
+    font-family: Arial, sans-serif;
+
+    cursor: pointer;
+
+    line-height: 1;
+
+    z-index: 1001;
+}
+
+
+/* =========================
+   LETTER SECTION
+========================= */
 
 .letter {
     min-height: 100vh;
 
-    padding: 100px 25px;
+    padding: 120px 25px;
 
     display: flex;
 
@@ -148,81 +251,171 @@ button:hover {
     text-align: center;
 }
 
+
+.letter .eyebrow {
+    margin-bottom: 35px;
+}
+
+
 .letter-paper {
     width: 100%;
 
-    max-width: 650px;
+    max-width: 700px;
 
     background: #fffdf8;
 
-    padding: 55px 60px;
+    padding: 70px 75px;
 
     box-shadow: 0 15px 40px rgba(60, 45, 30, 0.15);
 
     position: relative;
 }
 
+
 .letter-paper::before {
     content: "♡";
 
     position: absolute;
 
-    top: 20px;
+    top: 25px;
 
-    right: 25px;
+    right: 30px;
 
-    font-size: 22px;
+    font-size: 24px;
 
     opacity: 0.35;
 }
+
 
 .letter-paper h2 {
     font-family: "Playfair Display", serif;
 
     font-size: clamp(32px, 6vw, 48px);
 
+    line-height: 1.2;
+
     font-weight: 500;
 
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
+
 
 .letter-paper p {
     font-family: "Cormorant Garamond", serif;
 
-    font-size: 22px;
+    font-size: 23px;
 
-    line-height: 1.55;
+    line-height: 1.7;
 
-    margin-bottom: 22px;
+    margin-bottom: 32px;
 }
 
-.letter-paper .signature {
-    margin-top: 35px;
 
-    font-size: 24px;
+.letter-paper p:last-of-type {
+    margin-bottom: 0;
+}
+
+
+.letter-paper .signature {
+    margin-top: 45px;
+
+    font-size: 26px;
 
     font-style: italic;
 }
 
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 700px) {
 
     .hero {
-        padding: 30px 20px;
+        padding: 40px 20px;
     }
+
+
+    .eyebrow {
+        margin-bottom: 20px;
+    }
+
+
+    h1 {
+        font-size: clamp(45px, 13vw, 70px);
+    }
+
+
+    .subtitle {
+        font-size: 24px;
+
+        margin-bottom: 40px;
+    }
+
+
+    .polaroid {
+        width: 210px;
+
+        margin-bottom: 40px;
+    }
+
 
     .letter {
-        padding: 80px 20px;
+        padding: 90px 20px;
     }
+
+
+    .letter .eyebrow {
+        margin-bottom: 30px;
+    }
+
 
     .letter-paper {
-        padding: 45px 30px;
+        padding: 55px 30px;
     }
 
+
+    .letter-paper h2 {
+        font-size: 34px;
+
+        line-height: 1.2;
+
+        margin-bottom: 35px;
+    }
+
+
     .letter-paper p {
-        font-size: 20px;
+        font-size: 21px;
+
+        line-height: 1.65;
+
+        margin-bottom: 30px;
+    }
+
+
+    .letter-paper .signature {
+        margin-top: 40px;
+    }
+
+
+    .photo-overlay {
+        padding: 20px;
+    }
+
+
+    .photo-overlay img {
+        max-width: 95vw;
+
+        max-height: 85vh;
+    }
+
+
+    .close-photo {
+        top: 15px;
+
+        right: 20px;
+
+        font-size: 35px;
     }
 
 }
